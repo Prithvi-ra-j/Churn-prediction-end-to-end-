@@ -1,0 +1,1 @@
+        inputQuery13 = request.form['query13']  # Tech

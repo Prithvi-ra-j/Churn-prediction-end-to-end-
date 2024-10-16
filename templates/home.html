@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="http://localhost:5001/" method="POST">
+                <div class="col-sm-9">
+                    <div class="form-group purple-border">
+                        <label for="query1">Gender:</label>
+                        <input type="text" class="form-control" id="query1" name="query1" value="{{ query1 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query2">SeniorCitizen:</label>
+                        <input type="number" class="form-control" id="query2" name="query2" value="{{ query2 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query3">Partner:</label>
+                        <input type="text" class="form-control" id="query3" name="query3" value="{{ query3 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query4">Dependents:</label>
+                        <input type="text" class="form-control" id="query4" name="query4" value="{{ query4 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query5">Tenure:</label>
+                        <input type="number" class="form-control" id="query5" name="query5" value="{{ query5 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query6">PhoneService:</label>
+                        <input type="text" class="form-control" id="query6" name="query6" value="{{ query6 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query7">MultipleLines:</label>
+                        <input type="text" class="form-control" id="query7" name="query7" value="{{ query7 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query8">InternetService:</label>
+                        <input type="text" class="form-control" id="query8" name="query8" value="{{ query8 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query9">OnlineSecurity:</label>
+                        <input type="text" class="form-control" id="query9" name="query9" value="{{ query9 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query10">OnlineBackup:</label>
+                        <input type="text" class="form-control" id="query10" name="query10" value="{{ query10 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query11">DeviceProtection:</label>
+                        <input type="text" class="form-control" id="query11" name="query11" value="{{ query11 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query12">TechSupport:</label>
+                        <input type="text" class="form-control" id="query12" name="query12" value="{{ query12 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query13">StreamingTV:</label>
+                        <input type="text" class="form-control" id="query13" name="query13" value="{{ query13 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query14">StreamingMovies:</label>
+                        <input type="text" class="form-control" id="query14" name="query14" value="{{ query14 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query15">Contract:</label>
+                        <input type="text" class="form-control" id="query15" name="query15" value="{{ query15 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query16">PaperlessBilling:</label>
+                        <input type="text" class="form-control" id="query16" name="query16" value="{{ query16 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query17">PaymentMethod:</label>
+                        <input type="text" class="form-control" id="query17" name="query17" value="{{ query17 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query18">MonthlyCharges:</label>
+                        <input type="number" step="0.01" class="form-control" id="query18" name="query18" value="{{ query18 }}" required>
+                    </div>
+                    <div class="form-group purple-border">
+                        <label for="query19">TotalCharges:</label>
+                        <input type="number" step="0.01" class="form-control" id="query19" name="query19" value="{{ query19 }}" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h3>Columns passed to the model:</h3>
+            <ul>
+                {% for column in model_columns %}
+                    <li>{{ column }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="row"> 
+            <div class="col-sm-9">
+                <div class="form-control" rows="2" id="output1">{{ output1 }}</div>
+                <div class="form-control" rows="2" id="output2">{{ output2 }}</div>
+            </div>
+        </div>
+    </div>		
+</body>
+</html>
