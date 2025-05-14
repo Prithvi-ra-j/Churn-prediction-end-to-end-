@@ -18,15 +18,17 @@ In this project, I:
 ---
 
 ## 🗂️ Repository Structure
-├── EDA.ipynb # Exploratory Data Analysis notebook 
-├── Model Building.ipynb # Model training, evaluation, and deployment
-├── main dataset.csv # Raw Telco customer data
-├── tel_churn.csv # Processed data after feature engineering 
-├── templates/ 
-    │ └── home.html # Modern Bootstrap web UI for predictions 
-├── model2.sav # Final pickled model 
-└── README.md # Project documentation
 
+```
+├── EDA.ipynb                # Exploratory Data Analysis notebook
+├── Model Building.ipynb     # Model training, evaluation, and deployment
+├── main dataset.csv         # Raw Telco customer data
+├── tel_churn.csv            # Processed data after feature engineering
+├── templates/
+│   └── home.html            # Modern Bootstrap web UI for predictions
+├── model2.sav               # Final pickled model
+└── README.md                # Project documentation
+```
 ---
 
 ## 📈 Exploratory Data Analysis (EDA)
