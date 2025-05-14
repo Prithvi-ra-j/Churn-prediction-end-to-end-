@@ -64,6 +64,7 @@ Random Forest with SMOTEENN balancing
 - Built a modern, responsive UI using **Bootstrap 5**
 - Users can input customer details and get instant churn predictions with probability
 - Ready for deployment as a Flask app
+- ![Churn Prediction Dashboard](images/churn_dashboard.png)
 
 ---
 
