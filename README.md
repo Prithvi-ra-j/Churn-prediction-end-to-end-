@@ -25,7 +25,8 @@ In this project, I:
 ├── main dataset.csv         # Raw Telco customer data
 ├── tel_churn.csv            # Processed data after feature engineering
 ├── templates/
-│   └── home.html            # Modern Bootstrap web UI for predictions
+│   ├── home.html            # Modern Bootstrap web UI for predictions
+│   └── churn app.png        # Screenshot of the churn prediction app
 ├── model2.sav               # Final pickled model
 └── README.md                # Project documentation
 ```
@@ -64,7 +65,10 @@ Random Forest with SMOTEENN balancing
 - Built a modern, responsive UI using **Bootstrap 5**
 - Users can input customer details and get instant churn predictions with probability
 - Ready for deployment as a Flask app
-- ![Churn Prediction Dashboard](images/churn_dashboard.png)
+<p align="center">
+  <img src="templates/churn app.png" alt="Churn Prediction App Screenshot" width="600"/>
+</p>
+
 
 ---
 
